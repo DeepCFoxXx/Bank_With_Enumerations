@@ -20,6 +20,10 @@ describe('Bank', function() {
     bank.addAccount(account2);
     bank.addAccount(account3);
     bank.addAccount(account4);
-  })
+  });
+
+  it("should be able to add account", function() {
+    assert.strictEqual(bank.accounts.length, 4);
+  });
 
 });
