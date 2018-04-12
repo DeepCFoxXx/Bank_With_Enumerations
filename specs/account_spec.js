@@ -17,4 +17,8 @@ describe('Account', function() {
     assert.strictEqual(account1.value, 10000);
   });
 
+  it('should have a type', function() {
+    assert.strictEqual(account1.type, 'personal');
+  });
+
 });
