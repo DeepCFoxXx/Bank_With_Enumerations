@@ -46,4 +46,8 @@ Bank.prototype.totalValue = function () {
   return total;
 }
 
+Bank.prototype.averageValue = function () {
+  return this.totalValue() / this.accounts.length;
+}
+
 module.exports = Bank;

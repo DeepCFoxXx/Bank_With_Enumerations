@@ -52,4 +52,8 @@ describe('Bank', function() {
     assert.strictEqual(bank.totalValue(), 11110);
   });
 
+  it("should be able to find the average value of accounts", function() {
+    assert.strictEqual(bank.averageValue(), 2777.5);
+  });
+
 });
