@@ -26,4 +26,18 @@ Bank.prototype.largestAccount = function () {
   return largest;
 }
 
+Bank.prototype.payInterest = function () {
+  this.accounts = this.accounts.map(function (account) {
+    var newAccountValue = account.value * 1.1
+    return new Account(account.name, newAccountValue, account.type)
+  })
+}
+
+Bank.prototype.businessAccounts = function () {
+  return this.accounts.filter(function (account) {
+    return account.type === 'business';
+  });
+}
+
+
 module.exports = Bank;

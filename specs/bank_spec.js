@@ -34,4 +34,18 @@ describe('Bank', function() {
     assert.deepEqual(bank.largestAccount(), account1);
   });
 
+  xit("should be able to add 10% interest to all accounts", function() {
+    var interestPaid1 = new Account('Kara', 11000, 'personal');
+    var interestPaid2 = new Account('Stacy', 1100, 'business');
+    var interestPaid3 = new Account('Jason', 110, 'personal');
+    var interestPaid4 = new Account('Eren', 11, 'business');
+    var expected = [interestPaid1, interestPaid2, interestPaid3, interestPaid4];
+    bank.payInterest();
+    assert.deepStrictEqual(bank.accounts, expected);
+  });
+
+  it("should be able to return all business accounts", function() {
+    assert.deepStrictEqual(bank.businessAccounts(), [account2, account4]);
+  });
+
 });
