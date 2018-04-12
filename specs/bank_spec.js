@@ -13,8 +13,8 @@ describe('Bank', function() {
   beforeEach(function() {
     account1 = new Account('Kara', 10000, 'personal');
     account2 = new Account('Stacy', 1000, 'business');
-    account3 = new Account("Jason", 100, 'personal');
-    account4 = new Account("Eren", 10, 'business');
+    account3 = new Account('Jason', 100, 'personal');
+    account4 = new Account('Eren', 10, 'business');
     bank = new Bank();
     bank.addAccount(account1);
     bank.addAccount(account2);
@@ -24,6 +24,14 @@ describe('Bank', function() {
 
   it("should be able to add account", function() {
     assert.strictEqual(bank.accounts.length, 4);
+  });
+
+  xit("should be able to find an account by owner name", function() {
+    assert.strictEqual(bank.accountByName('Eren'), account4);
+  });
+
+  it("should be able to find an account with highest value", function() {
+    assert.deepEqual(bank.largestAccount(), account1);
   });
 
 });
