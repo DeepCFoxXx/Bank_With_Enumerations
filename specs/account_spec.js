@@ -9,8 +9,12 @@ describe('Account', function() {
     account1 = new Account('Kara', 10000, 'personal');
   });
 
-  it("should have a name", function() {
+  it('should have a name', function() {
     assert.strictEqual(account1.owner, 'Kara');
+  });
+
+  it('should have amount', function() {
+    assert.strictEqual(account1.value, 10000);
   });
 
 });
