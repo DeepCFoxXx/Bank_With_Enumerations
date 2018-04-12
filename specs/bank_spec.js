@@ -48,4 +48,8 @@ describe('Bank', function() {
     assert.deepStrictEqual(bank.businessAccounts(), [account2, account4]);
   });
 
+  it("should be able to find total value of all acounts", function() {
+    assert.strictEqual(bank.totalValue(), 11110);
+  });
+
 });
